@@ -1,0 +1,64 @@
+@import '_reboot.css';
+
+:root{
+    --color-dark-blue:hsl(218,28%,13%);
+    --color-white:#fff;
+}
+body{
+    background-color: var(--color-dark-blue);
+    color:var(--color-white)
+}
+
+.container{ 
+    max-width: 1024px;
+    margin:0 auto;
+    width: 90%;
+}
+
+/*@Header*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+
+    @media screen and (max-width:420px){
+        flex-direction: column;
+        margin:1rem 0;
+    }
+    
+}
+
+.nav__items{
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+}
+
+.nav__link{
+    color:inherit;
+}
+
+/*@Hero*/
+
+.hero{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 75ch;
+}
+
+.hero__img  img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.hero__title{
+    font-size: 2.3rem;
+    line-height: 1.5;
+}
+
+.hero p{
+  font-size:1rem;
+}

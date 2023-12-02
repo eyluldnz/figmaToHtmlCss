@@ -1,0 +1,73 @@
+/*reboot*/
+
+/*  ::before ve ::after öğeleri, bir HTML öğesi içinde belirli bir konumda içerik eklemek için kullanılan pseudo-elementlerdir. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* :root pseudo-sınıfını kullanarak CSS özel değişkenleri tanımlar. :root, bir HTML belgesinin kök öğesini temsil eder ve genellikle CSS özel değişkenleri (custom properties) tanımlamak için kullanılır.*/
+/*  var(--color-dark) şeklinde kullanımı vardır*/
+:root {
+  --color-primary: #f70058;
+  --color--dark: #0c0e36;
+  --color-light: #fff;
+  --fontWeight-normal: 400;
+  --fontWeight-bold: 700;
+  --fontWeight-black: 900;
+  --grid: 1fr;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.125rem; /*18px*/
+  color: var(--color--dark);
+  line-height: 1.6; /*25px*/
+}
+
+header {
+  background-color: var(--color-light);
+  text-align: center;
+}
+
+.logo{
+    margin-top: 1rem;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: var(--fontWeight-bold);
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.weather{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    background-color: var(--color--dark);
+    color: var(--color-light);
+}
+
+.weather__icon{
+    grid-row: span 2;
+    background-color: var(--color-primary);
+    display: flex;
+    padding: .5rem;
+}
+
+.weather__info{
+    margin-top: 0.8rem;
+    text-align: left;
+    padding-left: 1rem;
+}
